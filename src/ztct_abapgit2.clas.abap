@@ -1,14 +1,25 @@
-class ZTCT_ABAPGIT2 definition
-  public
-  final
-  create public .
+CLASS ztct_abapgit2 DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC .
 
-public section.
-protected section.
-private section.
+  PUBLIC SECTION.
+  INTERFACES: if_oo_adt_classrun.
+  PROTECTED SECTION.
+  PRIVATE SECTION.
 ENDCLASS.
 
 
 
-CLASS ZTCT_ABAPGIT2 IMPLEMENTATION.
+CLASS ztct_abapgit2 IMPLEMENTATION.
+  METHOD if_oo_adt_classrun~main.
+    out->write(
+      EXPORTING
+        data   = 'This is the Output.'
+*        name   =
+*      RECEIVING
+*        output =
+    ).
+  ENDMETHOD.
+
 ENDCLASS.
